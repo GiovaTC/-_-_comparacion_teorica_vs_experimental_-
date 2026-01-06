@@ -3,6 +3,8 @@
   
 <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/dd52b91e-e0bf-4d7e-9888-5e96fc62d0c4" />  
 
+<img width="1279" height="432" alt="image" src="https://github.com/user-attachments/assets/e6bfcc4a-2f22-4fab-afd9-812a3757b7a8" />		
+
 🎲 Lanzamiento de Dados – Simulación Monte Carlo en Java:
 
 Este documento presenta una comparación teórica y experimental aplicada al lanzamiento de dados, con fundamento matemático, interpretación numérica y código Java ejecutable para su validación empírica.
