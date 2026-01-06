@@ -14,13 +14,29 @@ public class ComparacionDados {
         Random random = new Random();
 
         // simulacion experimental .
+        for (int i = 0; i < lanzamientos; i++) {
+            int resultado = random.nextInt(6); // valores de 0 a 5 . . /
+            frecuencia[resultado]++;
+        }
 
-        System.out.printf("Hello and welcome!");
+        //  Resultados .
+        System.out.println("=== COMPARACION TEORICA VS EXPERIMENTAL===");
+        System.out.println("Lanzamientos: " + lanzamientos);
+        System.out.println("Probabilidad teorica: " + probTeorica);
+        System.out.println();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        System.out.printf("%-6s %-12s %-15s %-12s%n" ,
+                "Cara", "Frecuencia", "P Experimental", "Error");
+
+        for (int i = 0; i < 6; i++) {
+            double pExperimental = (double) frecuencia[i] / lanzamientos;
+            double error = Math.abs(pExperimental - probTeorica);
+
+            System.out.printf("%-6d %-12d %-15.6f %-12.6f%n",
+                    (i + 1),
+                    frecuencia[i],
+                    pExperimental,
+                    error); 
         }
     }
 }
